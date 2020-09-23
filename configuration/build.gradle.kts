@@ -13,8 +13,9 @@ val coreLibVersion: String by rootProject.ext
 dependencies {
     api(project(":api"))
     api(project(":controllers"))
+    api(project(":core"))
     api(project(":gateway"))
-
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -30,9 +31,3 @@ tasks.withType<KotlinCompile> {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
 }
-
-val jar: Jar by tasks
-val bootJar: org.springframework.boot.gradle.tasks.bundling.BootJar by tasks
-
-bootJar.enabled = false
-jar.enabled = true

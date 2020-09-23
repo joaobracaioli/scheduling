@@ -1,24 +1,14 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm")
+    id("io.spring.dependency-management")
 }
 
-val coreLibVersion: String by rootProject.ext
+val jacksonVersion: String by rootProject.ext
+val springBootVersion: String by rootProject.ext
 
 dependencies {
+
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
 
 val jar: Jar by tasks
 jar.enabled = true

@@ -1,18 +1,17 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-    id("org.springframework.boot")
     id("io.spring.dependency-management")
-
-    kotlin("jvm")
-    kotlin("plugin.spring")
 }
 
+val springBootVersion: String by rootProject.ext
+
 dependencies {
-    api(project(":api"))
-    api(project(":core"))
-    implementation("org.springframework:spring-web")
+    implementation(project(":api"))
+    implementation(project(":core"))
+    implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion") {
+        exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
+    }
 }
 
 tasks.withType<KotlinCompile> {
@@ -26,8 +25,3 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-val jar: Jar by tasks
-val bootJar: org.springframework.boot.gradle.tasks.bundling.BootJar by tasks
-
-bootJar.enabled = false
-jar.enabled = true

@@ -1,7 +1,8 @@
 package com.scheduling.configuration
 
-import com.scheduling.SchedulingResource
-import com.scheduling.SchedulingResourceImpl
+import com.scheduling.api.SchedulingResource
+import com.scheduling.controllers.SchedulingResourceImpl
+import com.scheduling.core.useCase.SaveSchedulingUseCase
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -9,5 +10,6 @@ import org.springframework.context.annotation.Configuration
 class ResourceConfiguration {
 
     @Bean
-    fun schedulingResource(): SchedulingResource = SchedulingResourceImpl()
+    fun schedulingResource(saveSchedulingUseCase: SaveSchedulingUseCase):
+            SchedulingResource = SchedulingResourceImpl(saveSchedulingUseCase)
 }

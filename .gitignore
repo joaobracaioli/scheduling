@@ -1,1 +1,43 @@
 */out/*
+**/build
+build/
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Eclipse ###
+**/.classpath
+**/.project
+**/target-ide/*
+**/.settings
+*~
+
+### VS Code ###
+.vscode/
+
+### Java ###
+**/*.class
+
+### Gradle ###
+.gradle/**
+build/**
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### Project ###
+**/logs/**
+**/build/**
+

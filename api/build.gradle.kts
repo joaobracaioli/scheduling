@@ -1,17 +1,14 @@
-plugins {
-    id("org.springframework.boot")
-    id("io.spring.dependency-management")
-}
-
-val coreLibVersion: String by rootProject.ext
+val jacksonVersion: String by rootProject.ext
+val springBootVersion: String by rootProject.ext
 
 dependencies {
-    api(project(":core"))
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion") {
+        exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
+    }
+    implementation("com.fasterxml.jackson.module", "jackson-module-kotlin", jacksonVersion)
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.4.10"))
+
 }
 
-val jar: Jar by tasks
-val bootJar: org.springframework.boot.gradle.tasks.bundling.BootJar by tasks
 
-bootJar.enabled = false
-jar.enabled = true
+
