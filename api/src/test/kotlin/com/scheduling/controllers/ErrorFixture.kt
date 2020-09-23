@@ -1,4 +1,4 @@
-package com.ifood.partner.portal.account.web.bff.core.usecase.fixture
+package com.scheduling.controllers
 
 import com.ifood.partner.portal.account.web.bff.core.entities.account.accesstoken.AccessToken
 import com.ifood.partner.portal.account.web.bff.core.entities.utility.result.Result

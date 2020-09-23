@@ -10,6 +10,8 @@ plugins {
 }
 
 dependencies {
+    api(project(":api"))
+    api(project(":core"))
     implementation("org.springframework:spring-web")
 }
 

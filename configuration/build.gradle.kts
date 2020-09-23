@@ -11,11 +11,10 @@ val coreLibVersion: String by rootProject.ext
 
 
 dependencies {
+    api(project(":api"))
     api(project(":controllers"))
     api(project(":gateway"))
 
-    implementation("org.springframework.boot:spring-boot-starter-jdbc")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

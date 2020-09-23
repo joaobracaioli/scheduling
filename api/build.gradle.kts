@@ -7,8 +7,7 @@ val coreLibVersion: String by rootProject.ext
 
 dependencies {
     api(project(":core"))
-
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
 }
 
 val jar: Jar by tasks
