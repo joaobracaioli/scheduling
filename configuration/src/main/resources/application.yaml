@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    show-sql: true
+
+database:
+  jdbc-url: jdbc:postgresql://localhost:5432/postgres
+  password: postgres
+  username: postgres
+  auto-commit: true
+  maximum-pool-size: 5
+  register-mbeans: true
+  validation-query: SELECT 1
+  driver-class-name: org.postgresql.Driver
+  idle-timeout-ms: 300000
+  max-life-time-ms: 540000
+  connection-timeout-ms: 5000
+  leak-detection-threshold: 10000

@@ -15,6 +15,11 @@ dependencies {
     api(project(":controllers"))
     api(project(":core"))
     api(project(":gateway"))
+
+    implementation("com.zaxxer:HikariCP:3.4.5")
+    implementation("org.postgresql:postgresql")
+    implementation("org.springframework:spring-jdbc:5.2.8.RELEASE")
+
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")

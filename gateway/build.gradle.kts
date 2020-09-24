@@ -1,12 +1,7 @@
-plugins {
-    id("io.spring.dependency-management")
-}
-
-val jacksonVersion: String by rootProject.ext
-val springBootVersion: String by rootProject.ext
 
 dependencies {
     implementation(project(":core"))
+    implementation("org.springframework:spring-jdbc:5.2.8.RELEASE")
 }
 
 

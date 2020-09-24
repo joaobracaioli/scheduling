@@ -6,5 +6,6 @@ class Scheduling (
     val beneficiary: String = "",
     val despatch: LocalDateTime,
     val message: String,
-    val sendType: SendType
+    val sendType: SendType,
+    val status: Status
 )
