@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 
 class Scheduling (
     val beneficiary: String = "",
-    val dateTime: LocalDateTime,
+    val despatch: LocalDateTime,
     val message: String,
     val sendType: SendType
 )

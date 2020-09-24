@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:10-alpine
+    volumes:
+      #      - postgres-eph-data:/var/lib/postgresql/data
+      - ./script/config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./script:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    network_mode: host
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres-eph-data:

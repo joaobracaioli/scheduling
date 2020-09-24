@@ -14,7 +14,7 @@ class SchedulingDTOTranslateToScheduling {
 
             return Scheduling(
                 beneficiary = scheduling.beneficiary ,
-                 dateTime = LocalDateTime.of(LocalDate.parse(scheduling.dateSend), LocalTime.parse(scheduling.hourSend)),
+                 despatch = LocalDateTime.of(LocalDate.parse(scheduling.dateSend), LocalTime.parse(scheduling.hourSend)),
                  message =  scheduling.message,
                  sendType=  SendType.valueOf(scheduling.typeSend)
             )
