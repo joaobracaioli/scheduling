@@ -2,7 +2,7 @@ package com.scheduling.api.model
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-data class SchedulingDTO (
+data class SchedulingRequestDTO (
 
     @JsonProperty("beneficiary")
     val beneficiary: String = "",

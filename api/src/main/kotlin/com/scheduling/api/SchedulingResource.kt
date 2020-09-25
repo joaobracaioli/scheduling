@@ -1,7 +1,9 @@
 package com.scheduling.api
 
-import com.scheduling.api.model.SchedulingDTO
+import com.scheduling.api.model.SchedulingCountDTO
+import com.scheduling.api.model.SchedulingRequestDTO
 import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -13,5 +15,9 @@ interface SchedulingResource {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun add(@RequestBody scheduling : SchedulingDTO)
+    fun add(@RequestBody scheduling : SchedulingRequestDTO)
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    fun list() : SchedulingCountDTO
 }

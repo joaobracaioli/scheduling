@@ -1,6 +1,6 @@
 package com.scheduling.controllers.translators
 
-import com.scheduling.api.model.SchedulingDTO
+import com.scheduling.api.model.SchedulingRequestDTO
 import com.scheduling.core.entities.Scheduling
 import com.scheduling.core.entities.SendType
 import com.scheduling.core.entities.Status
@@ -11,7 +11,7 @@ import java.time.LocalTime
 class SchedulingDTOTranslateToScheduling {
 
     companion object {
-        fun translate(scheduling: SchedulingDTO): Scheduling {
+        fun translate(scheduling: SchedulingRequestDTO): Scheduling {
 
             return Scheduling(
                 beneficiary = scheduling.beneficiary ,
