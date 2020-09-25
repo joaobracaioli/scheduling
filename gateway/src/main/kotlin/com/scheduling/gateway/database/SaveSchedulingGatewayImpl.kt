@@ -18,6 +18,7 @@ class SaveSchedulingGatewayImpl(private val jdbcTemplate: NamedParameterJdbcTemp
         params["beneficiary"] = scheduling.beneficiary
         params["message"] = scheduling.message
         params["status"] = scheduling.status.name
+        params["type_send"] = scheduling.sendType.name
         jdbcTemplate.update(
             INSERT_SCHEDULING,
             params

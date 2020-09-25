@@ -10,7 +10,8 @@ CREATE TABLE IF NOT EXISTS scheduling (
     despatch timestamp,
     beneficiary varchar(200),
     message varchar(200),
+    type_send varchar(10),
     status varchar(10)
 );
 insert into scheduling values
-(public.uuid_generate_v4(), now() - interval '1 hour', now() - interval '1 hour', now() + interval '3 hour', 'test', 'teste', 'send');
+(public.uuid_generate_v4(), now() - interval '1 hour', now() - interval '1 hour', now() + interval '3 hour', 'test', 'teste','SMS', 'SEND');
