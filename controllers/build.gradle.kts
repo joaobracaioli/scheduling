@@ -12,7 +12,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion") {
         exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
     }
-
 }
 
 tasks.withType<KotlinCompile> {

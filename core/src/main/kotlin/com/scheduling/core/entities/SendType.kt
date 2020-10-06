@@ -4,6 +4,5 @@ enum class SendType {
     WHATSAPP,
     EMAIL,
     SMS,
-    PUSH
-
+    PUSH;
 }
