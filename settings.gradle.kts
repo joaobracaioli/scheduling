@@ -1,2 +1,2 @@
 rootProject.name = "scheduling"
-include( "core", "api", "controllers", "gateway", "configuration")
+include("configuration", "core", "controllers", "gateway", "api")

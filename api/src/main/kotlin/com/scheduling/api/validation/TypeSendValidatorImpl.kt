@@ -1,13 +1,13 @@
 package com.scheduling.api.validation
 
-import com.scheduling.core.entities.SendType
+import com.scheduling.api.model.SendTypeDTO
 import javax.validation.ConstraintValidator
 import javax.validation.ConstraintValidatorContext
 
 class TypeSendValidatorImpl : ConstraintValidator<TypeSendValidator, String> {
 
     override fun isValid(value: String?, context: ConstraintValidatorContext?): Boolean {
-        return valueOf<SendType>(value ?: "")
+        return valueOf<SendTypeDTO>(value ?: "")
     }
 }
 

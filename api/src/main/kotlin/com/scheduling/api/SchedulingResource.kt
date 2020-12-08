@@ -14,12 +14,11 @@ import javax.validation.Valid
 @RequestMapping("/scheduling")
 interface SchedulingResource {
 
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun add(@Valid @RequestBody scheduling : SchedulingRequestDTO)
+    fun add(@Valid @RequestBody scheduling: SchedulingRequestDTO)
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    fun list(@RequestParam(defaultValue = "100") limit: Int, @RequestParam(defaultValue = "0") offset: Int) : SchedulingCountDTO
+    fun list(@RequestParam(defaultValue = "100") limit: Int, @RequestParam(defaultValue = "0") offset: Int): SchedulingCountDTO
 }

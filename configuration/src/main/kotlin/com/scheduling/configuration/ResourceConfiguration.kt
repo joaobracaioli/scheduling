@@ -11,7 +11,8 @@ import org.springframework.context.annotation.Configuration
 class ResourceConfiguration {
 
     @Bean
-    fun schedulingResource(saveSchedulingUseCase: SaveSchedulingUseCase,
+    fun schedulingResource(
+        saveSchedulingUseCase: SaveSchedulingUseCase,
         retrieveAllSchedulingUseCase: RetrieveAllSchedulingUseCase
-    ):SchedulingResource = SchedulingResourceImpl(saveSchedulingUseCase, retrieveAllSchedulingUseCase)
+    ): SchedulingResource = SchedulingResourceImpl(saveSchedulingUseCase, retrieveAllSchedulingUseCase)
 }

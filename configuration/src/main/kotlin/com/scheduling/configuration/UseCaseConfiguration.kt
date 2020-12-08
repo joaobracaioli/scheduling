@@ -15,12 +15,13 @@ class UseCaseConfiguration {
     @Bean
     fun schedulingUseCase(
         validationExecutorUseCase: ValidationExecutorUseCase,
-        saveSchedulingGateway: SaveSchedulingGateway)
-            : SaveSchedulingUseCase = SaveSchedulingUseCase(validationExecutorUseCase, saveSchedulingGateway)
+        saveSchedulingGateway: SaveSchedulingGateway
+    ):
+            SaveSchedulingUseCase = SaveSchedulingUseCase(validationExecutorUseCase, saveSchedulingGateway)
 
     @Bean
-    fun retrieveAllSchedulingUseCase(listSchedulingGateway: ListSchedulingGateway)
-            : RetrieveAllSchedulingUseCase = RetrieveAllSchedulingUseCase(listSchedulingGateway)
+    fun retrieveAllSchedulingUseCase(listSchedulingGateway: ListSchedulingGateway):
+            RetrieveAllSchedulingUseCase = RetrieveAllSchedulingUseCase(listSchedulingGateway)
 
     @Bean
     fun validationExecutor(roles: List<SendRule>): ValidationExecutorUseCase = ValidationExecutorUseCase(roles)

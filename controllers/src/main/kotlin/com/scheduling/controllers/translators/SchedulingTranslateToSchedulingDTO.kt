@@ -8,7 +8,7 @@ import java.util.stream.Collectors
 class SchedulingTranslateToSchedulingDTO {
     companion object {
         fun translate(scheduling: Scheduling): SchedulingResponseDTO {
-            val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+            val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
             return SchedulingResponseDTO(
                 beneficiary = scheduling.beneficiary,
                 despatch = scheduling.despatch.format(formatter),

@@ -16,10 +16,10 @@ class SchedulingRequestDTOTranslateToScheduling {
 
             return Scheduling(
                 id = UUID.randomUUID(),
-                beneficiary = scheduling.beneficiary ,
+                beneficiary = scheduling.beneficiary,
                 despatch = LocalDateTime.of(LocalDate.parse(scheduling.dateSend), LocalTime.parse(scheduling.hourSend)),
-                message =  scheduling.message,
-                sendType =  SendType.valueOf(scheduling.typeSend),
+                message = scheduling.message,
+                sendType = SendType.valueOf(scheduling.typeSend),
                 status = Status.CREATED
             )
         }

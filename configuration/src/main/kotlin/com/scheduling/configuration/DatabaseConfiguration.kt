@@ -35,14 +35,6 @@ class DatabaseConfiguration(
         hikariConfig.jdbcUrl = dataSourceProperties.jdbcUrl
         hikariConfig.username = dataSourceProperties.username
         hikariConfig.password = dataSourceProperties.password
-        hikariConfig.isAutoCommit = dataSourceProperties.autoCommit
-        hikariConfig.isRegisterMbeans = dataSourceProperties.registerMBeans
-        hikariConfig.maximumPoolSize = dataSourceProperties.maximumPoolSize
-        hikariConfig.driverClassName = dataSourceProperties.driverClassName
-        hikariConfig.maxLifetime = dataSourceProperties.maxLifeTimeMs
-        hikariConfig.idleTimeout = dataSourceProperties.idleTimeoutMs
-        hikariConfig.connectionTimeout = dataSourceProperties.connectionTimeoutMs
-        hikariConfig.leakDetectionThreshold = dataSourceProperties.leakDetectionThreshold
 
         return hikariConfig
     }

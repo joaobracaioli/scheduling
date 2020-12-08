@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration
 class RuleConfiguration {
 
     @Bean
-    fun roleEmail() : SendRule = Email()
+    fun roleEmail() = Email()
 
     @Bean
     fun roleSMS(): SendRule = SMS()
